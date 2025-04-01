@@ -82,7 +82,7 @@ void Binary::deleteNode(int value){
 }
 
 void Binary:: inorder(Node* node){
-    if(root == nullptr){
+    if(node == nullptr){
         return;
     }
 
@@ -97,7 +97,7 @@ void Binary::inorder(){
 }
 
 void Binary::preorder(Node* node){
-    if(root == nullptr){
+    if(node == nullptr){
         return;
     }
 
@@ -112,7 +112,7 @@ void Binary::preorder(){
 }
 
 void Binary::postorder(Node* node){
-    if(root == nullptr){
+    if(node == nullptr){
         return;
     }
 
@@ -127,7 +127,7 @@ void Binary::postorder(){
 }
 
 void Binary::levelOrder(Node* node){
-    if (root == nullptr){
+    if (node == nullptr){
         return;
     }
 
@@ -149,7 +149,7 @@ void Binary::levelOrder(){
 }
 
 int Binary::countNodes(Node* node){
-    if (root == nullptr){
+    if (node == nullptr){
         return 0;
     }
 
@@ -161,12 +161,12 @@ int Binary::countNodes(){
 }
 
 int Binary::height(Node* node){
-    if (root == nullptr){
+    if (node == nullptr){
         return -1;
     }
 
-    int leftHeight = height(root->left);
-    int rightHeight = height(root->right);
+    int leftHeight = height(node->left);
+    int rightHeight = height(node->right);
     return 1 + max(leftHeight, rightHeight);
 }
 
