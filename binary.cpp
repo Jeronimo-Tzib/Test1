@@ -2,6 +2,7 @@
 
 #include "binary.h"
 #include <queue>
+#include <algorithm>
 
 
 // constructor
@@ -142,6 +143,36 @@ void Binary::levelOrder(Node* node){
 
 }
 
+void Binary::levelOrder(){
+    levelOrder(root);
+    cout << endl;
+}
+
+int Binary::countNodes(Node* node){
+    if (root == nullptr){
+        return 0;
+    }
+
+    return 1 + countNodes(node->left) + countNodes(node->right);
+}
+
+int Binary::countNodes(){
+    return countNodes(root);
+}
+
+int Binary::height(Node* node){
+    if (root == nullptr){
+        return -1;
+    }
+
+    int leftHeight = height(root->left);
+    int rightHeight = height(root->right);
+    return 1 + max(leftHeight, rightHeight);
+}
+
+int Binary::height(){
+    return height(root);
+}
 
 
 

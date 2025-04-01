@@ -44,7 +44,7 @@ public:
     void preorder();
     void postorder();
     void levelOrder();
-    void countNodes();
+    int countNodes();
     int height();
 
 };
