@@ -9,7 +9,7 @@
 
 Binary::Binary() : root(nullptr){}
 
-//declare helper function for insert for recursion
+//declare helper function for insert with recursion
 
 Binary::Node* Binary :: insert(Node* node, int value){
     if (node == nullptr){
@@ -37,8 +37,13 @@ bool Binary::searchTree(Node* node, int value) {
     if (node->data == value) {
         return true;  // value found
     }
-    return (value < node->data) ? searchTree(node->left, value) : searchTree(node->right, value);
+    if (value < node->data) {
+        return searchTree(node->left, value);  // search in the left subtree
+    } else {
+        return searchTree(node->right, value);  // search in the right subtree
+    }
 }
+
 
 bool Binary::searchTree(int value) {
     return searchTree(root, value);  // returns true if found, false otherwise

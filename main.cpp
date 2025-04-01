@@ -56,7 +56,7 @@ int main(){
     // let's try to search for a value that's not in the tree
 
     int Val2 = 90;
-    if(tree.searchTree(Val)){
+    if(tree.searchTree(Val2)){
         cout << "Found " << Val2 << " in the tree" << endl;   
     } else { 
         cout << "Did not find " << Val2 << " in the tree" << endl;
