@@ -29,4 +29,4 @@ as VScode. Then you can install an extension called 'Coderunner' and
 we can simply click the run button on the top right and our code will
 compile and run automatically.
 
-Link to unlisted YouTube Video: https://drive.google.com/drive/folders/1BwC9xL64Iv5tpPft-IS1QQ8Wl1G2W3uF?usp=drive_link
+Link to unlisted YouTube Video: https://youtu.be/5yY_x409z_U
